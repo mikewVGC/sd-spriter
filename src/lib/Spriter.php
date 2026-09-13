@@ -113,8 +113,8 @@ class Spriter
 
             $species = $this->data[self::DTYPE_SPECIES][$main_code];
             $mon_code = str_replace(
-                [ '-', ' ', '.', "'" ],
-                [ '', '', '', '' ],
+                [ '-', ' ', '.', "'", "’" ],
+                [ '', '', '', '', '' ],
                 strtolower("{$species['base']}{$species['forme']}")
             );
 
