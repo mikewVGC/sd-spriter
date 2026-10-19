@@ -250,6 +250,12 @@ class Spriter
 
             $coordinates[$sprite_file['code']] = [ $x * $icon_width, $y * $icon_height ];
 
+            if ($sprite_file['code'] == "gourgeist") {
+                foreach ([ 'super', 'large', 'small' ] as $size) {
+                    $coordinates["gourgeist{$size}"] = $coordinates[$sprite_file['code']];
+                }
+            }
+
             $x++;
             if ($x > $columns - 1) {
                 $x = 0;
